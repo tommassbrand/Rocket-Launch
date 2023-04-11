@@ -18,12 +18,12 @@ public final class GetRocketsUseCaseMock: GetRocketsUseCase {
         return executeCallsCount > 0
     }
     public var executeReturnValue: [Rocket]!
-    public init(executeReturnValue: String) {
+    public init(executeReturnValue: [Rocket]) {
         self.executeReturnValue = executeReturnValue
     }
     public var executeClosure: (() -> [Rocket])?
 
-    public func execute() -> [Rocket] {
+    public func execute(page: Int) async throws -> [Rocket] {
         executeCallsCount += 1
         if let executeClosure = executeClosure {
             return executeClosure()
