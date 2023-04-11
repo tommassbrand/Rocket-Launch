@@ -12,6 +12,7 @@
 		E8A0232029BF3A0E00BE3455 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A0231F29BF3A0E00BE3455 /* Repositories+Injection.swift */; };
 		E8A0232229BF3AC300BE3455 /* RocketsToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = E8A0232129BF3AC300BE3455 /* RocketsToolkit */; };
 		E8A0232429BF3DAA00BE3455 /* UseCases+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A0232329BF3DAA00BE3455 /* UseCases+Injection.swift */; };
+		E8B629DC29E5451E00E8BCB7 /* SharedDomainMocks in Frameworks */ = {isa = PBXBuildFile; productRef = E8B629DB29E5451E00E8BCB7 /* SharedDomainMocks */; };
 		E8EB665129E3F14000467672 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8EB665329E3F14000467672 /* Localizable.strings */; };
 		E8EB665C29E43DD300467672 /* UserDefaultsProvider in Frameworks */ = {isa = PBXBuildFile; productRef = E8EB665B29E43DD300467672 /* UserDefaultsProvider */; };
 		E8F8373E29BCBD73006ED11D /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F8373D29BCBD73006ED11D /* AppIcon.xcassets */; };
@@ -59,6 +60,7 @@
 				E8EB665C29E43DD300467672 /* UserDefaultsProvider in Frameworks */,
 				E8F8375329BCBE70006ED11D /* Resolver in Frameworks */,
 				E8F8375E29BCC11A006ED11D /* SharedDomain in Frameworks */,
+				E8B629DC29E5451E00E8BCB7 /* SharedDomainMocks in Frameworks */,
 				E8F8377029BCCC53006ED11D /* Utilities in Frameworks */,
 				E8F8376E29BCCC4F006ED11D /* UIToolkit in Frameworks */,
 				E8A0232229BF3AC300BE3455 /* RocketsToolkit in Frameworks */,
@@ -200,6 +202,7 @@
 				E8F8376F29BCCC53006ED11D /* Utilities */,
 				E8A0232129BF3AC300BE3455 /* RocketsToolkit */,
 				E8EB665B29E43DD300467672 /* UserDefaultsProvider */,
+				E8B629DB29E5451E00E8BCB7 /* SharedDomainMocks */,
 			);
 			productName = RocketLaunch;
 			productReference = E8F8373629BCBD72006ED11D /* RocketLaunch.app */;
@@ -226,6 +229,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E8F8372D29BCBD72006ED11D;
 			packageReferences = (
@@ -495,6 +499,10 @@
 		E8A0232129BF3AC300BE3455 /* RocketsToolkit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RocketsToolkit;
+		};
+		E8B629DB29E5451E00E8BCB7 /* SharedDomainMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedDomainMocks;
 		};
 		E8EB665B29E43DD300467672 /* UserDefaultsProvider */ = {
 			isa = XCSwiftPackageProductDependency;

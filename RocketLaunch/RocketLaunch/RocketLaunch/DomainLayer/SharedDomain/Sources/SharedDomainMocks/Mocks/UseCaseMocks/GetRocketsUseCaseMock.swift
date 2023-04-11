@@ -13,20 +13,24 @@ public final class GetRocketsUseCaseMock: GetRocketsUseCase {
 
     //MARK: - execute
 
+    public var executeThrowableError: Error?
     public var executeCallsCount = 0
     public var executeCalled: Bool {
         return executeCallsCount > 0
     }
-    public var executeReturnValue: [Rocket]!
-    public init(executeReturnValue: String) {
+    public var executeReturnValue: [Rocket] = []
+    public init(executeReturnValue: [Rocket]) {
         self.executeReturnValue = executeReturnValue
     }
-    public var executeClosure: (() -> [Rocket])?
+    public var executeClosure: (() async throws -> [Rocket])?
 
-    public func execute() -> [Rocket] {
+    public func execute(page: Int) async throws -> [Rocket] {
         executeCallsCount += 1
+        if let error = executeThrowableError {
+            throw error
+        }
         if let executeClosure = executeClosure {
-            return executeClosure()
+            return try await executeClosure()
         } else {
             return executeReturnValue
         }

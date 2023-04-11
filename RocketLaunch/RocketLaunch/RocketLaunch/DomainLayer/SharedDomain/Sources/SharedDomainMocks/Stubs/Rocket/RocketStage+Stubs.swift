@@ -8,7 +8,7 @@
 import SharedDomain
 
 public extension RocketStage {
-    public static let stubRocketStage = RocketStage(
+    static let stubRocketStage = RocketStage(
         reusable: true,
         engines: 4,
         fuelAmountTons: 2443,

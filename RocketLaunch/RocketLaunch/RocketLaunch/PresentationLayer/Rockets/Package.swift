@@ -29,6 +29,7 @@ let package = Package(
                 .product(name: "UIToolkit", package: "UIToolkit"),
                 .product(name: "Utilities", package: "Utilities"),
                 .product(name: "SharedDomain", package: "SharedDomain"),
+                .product(name: "SharedDomainMocks", package: "SharedDomain"),
                 .product(name: "Resolver", package: "Resolver"),
                 .product(name: "RocketDetail", package: "RocketDetail")
             ]

@@ -53,6 +53,7 @@ final class RocketsViewModel: BaseViewModel, ViewModel, ObservableObject {
     
     // MARK: Intent
     enum Intent {
+        case fetch
         case showDetail(String)
         case dismissAlert
     }
@@ -60,6 +61,7 @@ final class RocketsViewModel: BaseViewModel, ViewModel, ObservableObject {
     func onIntent(_ intent: Intent) {
         executeTask(Task {
             switch intent {
+            case .fetch: await fetchData()
             case let .showDetail(rocketId): showDetail(for: rocketId)
             case .dismissAlert: dismissAlert()
             }
