@@ -63,7 +63,6 @@ public enum AppTheme {
         public static let bodyTextBold = Font.custom("Helvetica", size: 16).bold()
         public static let bodyTextSmall = Font.custom("Helvetica", size: 12)
         
-        
         // Views
         public static let cellLargeTitle = Font.custom("Helvetica", size: 32).bold()
         

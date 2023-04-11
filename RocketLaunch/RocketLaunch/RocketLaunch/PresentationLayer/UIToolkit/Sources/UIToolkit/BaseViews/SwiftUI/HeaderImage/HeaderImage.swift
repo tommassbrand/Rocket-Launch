@@ -15,6 +15,7 @@ public struct HeaderImage: View {
     private let geo: GeometryProxy
     private var height: CGFloat = 0
     private var offset: CGFloat = 0
+    private let hStackYOffset: CGFloat = -24
     
     private let onPhotoButtonTap: () -> Void
     
@@ -55,13 +56,13 @@ public struct HeaderImage: View {
             Group {
                 HStack {
                     Spacer()
-                    Button("Photos") {
+                    Button(Strings.rocketPhotosButtonTitle) {
                         onPhotoButtonTap()
                     }
                     .buttonStyle(PhotosButtonStyle())
                 }
                 .padding()
-                .offset(y: -24)
+                .offset(y: hStackYOffset)
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
         }

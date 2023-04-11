@@ -27,6 +27,7 @@ public class Strings {
     // Rocket detail screen
     public static let emptyPhotosErrorTitle = NSLocalizedString("empty_photos_error_title", comment: "")
     public static let rocketLaunchButtonTitle = NSLocalizedString("rocket_launch_button_title", comment: "")
+    public static let rocketPhotosButtonTitle = NSLocalizedString("rocket_photos_button_title", comment: "")
     public static let paramsSectionTitle = NSLocalizedString("params_section_title", comment: "")
     public static let paramsMetersKeyTitle = NSLocalizedString("params_meters_key_title", comment: "")
     public static let paramsTonsKeyTitle = NSLocalizedString("params_tons_key_title", comment: "")
