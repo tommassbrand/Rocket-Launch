@@ -8,22 +8,22 @@
 import SharedDomain
 
 public final class GetRocketUseCaseMock: GetRocketUseCase {
-
+    
     public init() {}
-
+    
     //MARK: - execute
-
+    
     public var executeCallsCount = 0
     public var executeCalled: Bool {
         return executeCallsCount > 0
     }
     public var executeReturnValue: Rocket!
-    public init(executeReturnValue: String) {
+    public init(executeReturnValue: Rocket) {
         self.executeReturnValue = executeReturnValue
     }
     public var executeClosure: (() -> Rocket)?
-
-    public func execute() -> Rocket {
+    
+    public func execute(id: String) async throws -> Rocket {
         executeCallsCount += 1
         if let executeClosure = executeClosure {
             return executeClosure()
@@ -31,3 +31,4 @@ public final class GetRocketUseCaseMock: GetRocketUseCase {
             return executeReturnValue
         }
     }
+}
