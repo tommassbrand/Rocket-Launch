@@ -24,7 +24,6 @@ final class AppFlowController: FlowController {
     
     func setupMain() {
         let fc = RocketsFlowController(navigationController: navigationController)
-       // fc.delegate = self
         let rootVC = startChildFlow(fc)
         navigationController.viewControllers = [rootVC]
     }
